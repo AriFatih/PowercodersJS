@@ -1,0 +1,53 @@
+EXERCISE1
+
+Allow the user to input digits, afterwards sort and print them in numerical order.
+
+Pseudocode:
+1) Take the all input digits from the user
+2) After taking them select the first digit as the digit to compare
+3) Compare the digit with the others,if one of them is smaller than the digit our new digit is that new smaller one
+4) If the comparison is finished for all the digits: the digit is the smaller digit if the serie
+5) For the remaining digits 2-3 and 4th steps are repeated
+
+EXERCISE2
+Find the number of the year for the given date. For example, january 1st would be 1, and december 31st is 365.
+
+Pseudocode:
+1) Take the date(month+day) from the user
+2) Look at the month, if it is January : number= 0*31+day
+3) Look at the month, if it is February : number= 1*31+day
+4) Look at the month, if it is March : number= 1*31+1*28+ day (We assume year is 365 day, we can also control that)
+5) Look at the month, if it is April : number= 2*31+1*28+ day
+6) Look at the month, if it is May : number= 2*31+1*28+1*30+ day
+7) Look at the month, if it is June : number= 3*31+1*28+1*30+ day
+8) Look at the month, if it is July : number= 3*31+1*28+2*30+ day
+9) Look at the month, if it is August : number= 4*31+1*28+2*30+ day
+10) Look at the month, if it is September : number= 5*31+1*28+2*30+ day
+11) Look at the month, if it is October : number= 5*31+1*28+3*30+ day
+12) Look at the month, if it is November : number= 6*31+1*28+3*30+ day
+13) Look at the month, if it is December : number= 6*31+1*28+4*30+ day
+
+EXERCISE3
+Create a random password generator. The password has to have a length of at least 8 characters, at least 1 digit and 1 special char (_ or -).
+
+Pseudocode:
+1) Select 8 digit place to write our password
+2) For first digit there are 10+2=12 options: select one of them
+3) REpeat the second step for the other 7 digits
+
+EXERCISE4
+Validate a telephone number, as if written on an input form. Telephone numbers can be written as ten digits, 
+or with dashes, spaces, or dots between the three segments, or with the area code parenthesized; 
+both the area code and any white space between segments are optional.
+
+Pseudocode:
+1) Take the telephone number from user:0779994397
+2) Control all the digits number is 10
+3) If digit number is 10 then control if they are numbers, 
+4) If they are numbers result is true, if not result=false
+5) If digit number is more than 10 control the digit between segments
+6) If thse segments are dashes, spacaes or dots result=true, if not result=false
+
+
+
+
