@@ -1,0 +1,83 @@
+TipCalculator
+    Initialize billAmount to 0
+    Initialize tip to 0
+    Initialize tipRate to 0
+    Initialize total to 0
+
+    Prompt for billAmount with "What is the bill amount?"
+    Prompt for tipRate with "What is the tip rate?"
+
+    convert billAmount to a number
+    convert tipRate to a number
+
+    tip = billAmount * (tipRate / 100)
+    round tip up to nearest 5 rappen  
+    total = billAmount + tip
+
+    Display "Tip : CHF" + tip
+    Display "Total : CHF" + total
+End
+List inputs, process and outputs
+Write test cases
+Find constraints
+Write the algorithm in pseudocode
+
+
+1) SAY HELLO
+Create a program that prompts for your name and prints a greeting using your name.
+
+
+SayHello
+	Initialize name to ""
+
+	Promt for the name "Please write your name"
+
+	Display " Hello " + name
+
+End
+
+2) Number Of Characters
+Create a program that prompts for an input string and displays output that shows the input string and the number of characters the string contains.
+
+NumberOfChars
+Initialize input to ""
+Initialize numberOfChars to 0
+
+Prompt for the input string "Please write your input to know its number of characters"
+
+
+Calculate the number of characters
+
+Display "Your Input consists of" +numberOfChars +" characters "
+
+
+End
+
+
+3) Guessing a Number
+
+I am thinking of an integer between 1 and 100. Your task is to find this number by asking me questions of the form "Is your number higher, lower or equal to x" for different numbers x.
+
+Describe input and output
+List the steps of an algorithm that solves the guessing problem
+How many steps do you need?
+Can you think of a mathematical formula your algorithm is based on?
+
+GuessingNumber
+
+Inputs:
+Answer to our question: Higher, lower or equal (String)
+Output: Questions and "Your number is ...." (String)
+
+INSTANTIATE GuessedNumber TO 0
+INSTANTIATE Answer TO ""
+
+1) Create a random number between 1-100 (GuessedNumber)
+2) Ask the user if that random number is higher, lower or equal to the User's number
+3) If the answer is higher: Create a random number between the GuessedNumber and 100 : Assign the new number to GuessedNumber
+	Go to the Second Step
+4) Else If the answer is lower:Create a random number between the GuessedNumber and 0 : Assign the new number to GuessedNumber
+	Go to the Second Step
+5) Else If the answer is Equal: Give back "Your number is GuessedNumber"
+
+

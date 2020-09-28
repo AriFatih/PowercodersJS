@@ -2,6 +2,46 @@ EXERCISE1
 
 Allow the user to input digits, afterwards sort and print them in numerical order.
 
+Questions:
+- Limit of inputs? 10 max
+- 1 input with max 10 numbers 
+- Are there seperators like commas, spaces, ...?
+1 input with commas (spaces are optional)
+Test input
+==========
+1,2,7,3 =>true
+1, 2, 7, 3 => true
+01226354 => false
+Expected Output
+===============
+1237 => true
+1,2,3,7 => false
+2371 => false
+[1,2,3,7] => false
+Constraints: 
+============
+- Numbers, positive, non-decimal
+- Input is string, needs to be converted
+- Digits, not greater than 9
+- max 10 digits
+- min 1 digit
+Input: Input digits in one field, seperated by comma
+Process: Sorting algorithm
+Output: Print digits in numerical order
+SortNumbers
+    INITIALIZE userInput AS String;
+    INITIALIZE digitsList AS List;
+    INITIALIZE output AS String;
+    INITIALIZE counter;
+    PROMPT "Please input minimum 2 digits and maximum 10 digits (0-9), separated by commas" AS userInput
+    SPLIT userInput AT THE SEPERATOR "," TO digitsList
+    // check for spaces, are there commas in the string
+    FOR EACH item OF digitsList
+        IF not a digit
+            PROMPT ("Please make sure that you only add single digits (0-9)");
+    END FOR EACH
+END SortNumbers
+
 Pseudocode:
 1) Take the all input digits from the user
 2) After taking them select the first digit as the digit to compare
@@ -12,41 +52,151 @@ Pseudocode:
 EXERCISE2
 Find the number of the year for the given date. For example, january 1st would be 1, and december 31st is 365.
 
-Pseudocode:
+Questions:
+Type of Input:    / Month:String  Day:Number 
+- Are there seperators like commas, spaces, ...?
+- Input in two fields, (spaces are optional)
+- Is the year important if it is a Leap year?
+- Output : Number
+
+     NumberOfDAte
+
+
 1) Take the date(month+day) from the user
-2) Look at the month, if it is January : number= 0*31+day
-3) Look at the month, if it is February : number= 1*31+day
-4) Look at the month, if it is March : number= 1*31+1*28+ day (We assume year is 365 day, we can also control that)
-5) Look at the month, if it is April : number= 2*31+1*28+ day
-6) Look at the month, if it is May : number= 2*31+1*28+1*30+ day
-7) Look at the month, if it is June : number= 3*31+1*28+1*30+ day
-8) Look at the month, if it is July : number= 3*31+1*28+2*30+ day
-9) Look at the month, if it is August : number= 4*31+1*28+2*30+ day
-10) Look at the month, if it is September : number= 5*31+1*28+2*30+ day
-11) Look at the month, if it is October : number= 5*31+1*28+3*30+ day
-12) Look at the month, if it is November : number= 6*31+1*28+3*30+ day
-13) Look at the month, if it is December : number= 6*31+1*28+4*30+ day
+2) If the month is January : number= 0*31+day
+3) If the month is February : number= 1*31+day
+4) If the month is March : number= 1*31+1*28+ day (We assume year is 365 day, we can also control that)
+5) If the month is April : number= 2*31+1*28+ day
+6) If the month is May : number= 2*31+1*28+1*30+ day
+7) If the month is June : number= 3*31+1*28+1*30+ day
+8) If the month is July : number= 3*31+1*28+2*30+ day
+9) If the month is August : number= 4*31+1*28+2*30+ day
+10) If the month is September : number= 5*31+1*28+2*30+ day
+11) If the month is October : number= 5*31+1*28+3*30+ day
+12) If the month is November : number= 6*31+1*28+3*30+ day
+13) If the month is December : number= 6*31+1*28+4*30+ day
+14) Print " The date which you have entered is the numberth day of the year"
+
+
+	end NumberOfDate
 
 EXERCISE3
 Create a random password generator. The password has to have a length of at least 8 characters, at least 1 digit and 1 special char (_ or -).
 
-Pseudocode:
-1) Select 8 digit place to write our password
+
+     PasswordGenerator
+
+INITIALIZE a variable to give the ramdom character
+
+1) Define  place to write our password
+	Define a list or variable which has a length of minimum 8 to insert random characters
+	
 2) For first digit there are 10+2=12 options: select one of them
-3) REpeat the second step for the other 7 digits
+	Use a random character generator for the first index of array
+3) REPEAT the second step for the other 7 indexes
+
+4) Check if it contains at least 1 digit and one special 
+	if not go back to the 2nd step
+
+5) Validate the length od the password
+	if it is more or equal to 8
+		OK
+	else go back to the 2nd step
+
+
+     END PasswordGenerator
+
 
 EXERCISE4
 Validate a telephone number, as if written on an input form. Telephone numbers can be written as ten digits, 
 or with dashes, spaces, or dots between the three segments, or with the area code parenthesized; 
 both the area code and any white space between segments are optional.
 
+
+input: String
+Output: String to user but integer to database
+
+Questions:
+1) Country codes, data sets/ 
+
+
+
 Pseudocode:
-1) Take the telephone number from user:0779994397
+1) Take the telephone number from user:
+2) Select the digits without any paranthesis, spaces or dots 
+
+SPLIT userInput AT THE SEPERATOR "," TO digitsList
+    // check for spaces, are there commas in the string
+    FOR EACH item OF digitsList
+        IF not a digit
+            PROMPT ("Please make sure that you only add single digits (0-9)");
+    END FOR EACH
 2) Control all the digits number is 10
-3) If digit number is 10 then control if they are numbers, 
-4) If they are numbers result is true, if not result=false
-5) If digit number is more than 10 control the digit between segments
-6) If thse segments are dashes, spacaes or dots result=true, if not result=false
+3) Validate without any paranthesis, spaces, dots means only digits must be 10 digits
+	if nOT ( "Please control your telephone number")
+
+
+
+
+
+
+GetThroughTheTunnel
+    Initialize maxTime as 12;
+    Initialize time1 as 1, time2 as 2, time3 as 4, time4 as 5;
+    Initialize maxPeople as 2;
+    Initialize totalTime as 0;
+    Initialize peopleAtStart as 4;
+    Initialize ListOfPeople;
+
+
+    Step 0: Compare times with each other to sort them by speed => output is ordered list:
+
+	1) Take the all initialized times
+	2) After taking them select the first one as temp1 to compare
+		temp1= time1;
+		
+	3) Compare the temp1 with the others,if one of them is smaller than temp1 our new temp1 is that new smaller one
+		if (temp1 >time2) 
+			temp1=time2;
+
+		else if (temp1> time3)
+			temp1=time3;
+
+  		else if (temp1 >time4)
+			temp1 = time4;
+
+	4) If the comparison is finished for all the digits: the temp1 is the smaller digit of the list	
+		
+
+	5) For the remaining digits 2-3 and 4th steps are repeated
+
+
+    	6) Select the 2FastestPeople (times) of the List
+
+    Select the 2SlowestPeople (times) of the List
+
+    Step 1: 2 fastest going
+        IF 2FastestPeople <= maxPeople
+            totalTime = totalTime + (slowest of the 2 fastest);
+            peopleAtStart = peopleAtStart-2
+        END IF
+    Step 2: The fastest is going back
+        totalTime = totalTime + (fastest of the 2 fastest);
+        peopleAtStart = peopleAtStart+1
+    Step3: 2 slowest going
+        totalTime = totalTime + (slowest of the 2 slowest);
+        peopleAtStart = peopleAtStart-2
+    Step 4: The fastest is going back
+        totalTime = totalTime + (slowest of the 2 fastest);
+        peopleAtStart = peopleAtStart+1
+    Step 5: the remaining pair going
+        totalTime = totalTime + (slowest of the 2 fastest);
+        peopleAtStart = peopleAtStart-2
+    IF totalTime <= maxTime AND peopleAtStart == 0
+        Print "Success. You rule!"
+    ELSE
+        Print "Failure. Try again."
+    END IF
 
 
 
