@@ -1,0 +1,121 @@
+Today's hour of code: 
+==================
+Write pseudocode that solves the following problems.  Please submit your solutions in the Google Classroom latest 3pm.
+You need to do two of the three questions, you can decide which two you want to do. If you want to do the third one it's up to you, but it's for extra credit.
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ANSWER 1:
+
+apperaringMost
+
+PseudoCode:
+
+INSTANTIATE an Array AS [] ( Which has 10 places for the digits);
+INSTANTIATE a variable AS tempNum;
+INSTANTIATE a number AS i;
+INSTANTIATE a number AS biggest;
+
+
+
+1) PROMPT AS "Please write a number"
+
+2) SPLIT the number for its each digits
+
+3) REPEAT:
+      for each digits of the Number assign it to tempNum
+	if (tempNum = i){
+		add it to the array [i]}
+	End If
+
+4) Compare the numbers in the Array to find the bigger one.
+	Assign the biggest digit to biggest;
+	
+
+5) Return the biggest as the answer
+
+
+End apperaringMost
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ANSWER 2:
+
+controllingParenthesis
+
+INSTANTIATE a String names s AS "";
+INSTANTIATE a number AS i;
+INSTANTIATE a number AS j;
+INSTANTIATE a number AS a;
+INSTANTIATE a number AS b;
+
+
+
+1) PROMPT AS "Please write your string to control its parenthesis"
+	ASSIGN the given String to s;
+
+2) Control all characters of the s
+	if any character= "(" assign its index to i;  
+	if any character= ")" assign its index to j;
+	if any character= "[" assign its index to a;
+	if any character= "]" assign its index to b;
+(REPEAT Step 2 for all the characters)
+
+
+3) If any new "(" is found before finding a ")" : It should return False
+   If any new "[" is found before finding a "]" : It should return False
+
+
+4) if (The characters between i and j are only letters) 
+	return True
+   else  return False
+
+5) if (The characters between a and b are only letters) 
+	return True
+   else  return False
+
+6) if (i>j)  return False
+		else return True
+
+    if (a>b)  return False
+		else return True
+
+
+End controllingParenthesis
+------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------
+
+ANSWER 3:
+
+reversingTheNumber
+
+
+INSTANTIATE an numbersList of Integers AS [] ;
+INSTANTIATE an reverseList of Integers AS [] ;
+INSTANTIATE a variable AS lengthOfList;
+
+
+1) PROMPT AS "Please write a number to reverse its digits"
+
+2) SPLIT the number for its each digits and ASSIGN them to the numberslist
+	If the first character of the number is not a number
+		Assign it to the last index of numberList
+
+3) ASSIGN the first index of the given numberlist to reverseList[lengthofList-1]
+	reverseList[lengthofList-1] = numberList [0];
+
+3) REPEAT ASSIGNING       for each index of Lists 
+
+4) Write again the number by taking the digits from reverseList
+	If the first digit is 0, begin with the other digit. ( REPEAT This until finding the number than 0)
+	
+
+5) Return the number as the answer
+
+
+End reversingTheNumber
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Good luck!
