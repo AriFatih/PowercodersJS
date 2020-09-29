@@ -56,7 +56,8 @@ End
 
 3) Guessing a Number
 
-I am thinking of an integer between 1 and 100. Your task is to find this number by asking me questions of the form "Is your number higher, lower or equal to x" for different numbers x.
+I am thinking of an integer between 1 and 100. Your task is to find this number by asking me questions of the form "Is your number higher, 
+lower or equal to x" for different numbers x.
 
 Describe input and output
 List the steps of an algorithm that solves the guessing problem
@@ -67,17 +68,17 @@ GuessingNumber
 
 Inputs:
 Answer to our question: Higher, lower or equal (String)
-Output: Questions and "Your number is ...." (String)
+Output: Questions and "Your number is "+ GuessedNumber (String)
 
 INSTANTIATE GuessedNumber TO 0
 INSTANTIATE Answer TO ""
 
-1) Create a random number between 1-100 (GuessedNumber)
+1) Create a random number between 1-100 and assigned TO (GuessedNumber)
 2) Ask the user if that random number is higher, lower or equal to the User's number
 3) If the answer is higher: Create a random number between the GuessedNumber and 100 : Assign the new number to GuessedNumber
 	Go to the Second Step
 4) Else If the answer is lower:Create a random number between the GuessedNumber and 0 : Assign the new number to GuessedNumber
 	Go to the Second Step
-5) Else If the answer is Equal: Give back "Your number is GuessedNumber"
+5) Else If the answer is Equal: Give back "Your number is" + GuessedNumber
 
 

@@ -95,10 +95,10 @@ INITIALIZE a variable to give the ramdom character
 	Use a random character generator for the first index of array
 3) REPEAT the second step for the other 7 indexes
 
-4) Check if it contains at least 1 digit and one special 
+4) Check if it contains at least 1 digit and one special character
 	if not go back to the 2nd step
 
-5) Validate the length od the password
+5) Validate the length of the password
 	if it is more or equal to 8
 		OK
 	else go back to the 2nd step
